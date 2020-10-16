@@ -24,8 +24,17 @@ app.get('/url/:id', (req, res) => {
   // TODO: get a short URL by id
 });
 
-app.get('/:id', (req, res) => {
-  // TODO: redirect to URL
+app.get('/:id', async (req, res) => {
+  const { id: slug } = req.params;
+  try {
+    const url = await urls.findOne({ slug });
+    if (url) {
+      res.redirect(url.url);
+    }
+    res.redirect(`/?error=${slug} not found`);
+  } catch (error) {
+    res.redirect('/?error=Link not found');
+  }
 });
 
 const schema = yup.object().shape({
