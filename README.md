@@ -2,6 +2,8 @@
 
 A Node.js app with Express, MongoDB (Monk) & Heroku
 
+:link: https://node-shortener-url.herokuapp.com/
+
 ## Dependencies
 
 - **Express** is a fast, unopinionated, minimalist web framework for Node. https://www.npmjs.com/package/express
@@ -11,5 +13,10 @@ A Node.js app with Express, MongoDB (Monk) & Heroku
 - **Morgan** is a HTTP request logger middleware for Node.js. https://www.npmjs.com/package/morgan
 - **CORS** is a Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
-`$ npm i express yup monk helmet morgan cors`
-`$ heroku git:remote -a node-shortener-url`
+- `$ npm i express yup monk helmet morgan cors`
+
+## Heroku
+
+- `$ heroku git:remote -a node-shortener-url`
+- `$ git push heroku main` . If this doesn't work, install the Buildpack for Nodejs:
+  - `$ heroku buildpacks:set heroku/nodejs`
