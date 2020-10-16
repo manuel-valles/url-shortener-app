@@ -12,3 +12,4 @@ A Node.js app with Express, MongoDB (Monk) & Heroku
 - **CORS** is a Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
 `$ npm i express yup monk helmet morgan cors`
+`$ heroku git:remote -a node-shortener-url`
