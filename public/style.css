@@ -4,16 +4,35 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: Verdana, sans-serif;
+  height: 100%;
 }
 
-header h1 {
-  margin: 1rem;
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  color: #ffffff;
+}
+
+.form {
+  margin: 1rem auto;
+}
+
+.error {
+  background: #a63446;
+  padding: 0.1rem;
   text-align: center;
 }
 
-#app {
-  width: 60%;
-  margin: 0 auto;
+.created {
+  margin-top: 1rem;
+}
+
+.created a {
+  color: inherit;
 }

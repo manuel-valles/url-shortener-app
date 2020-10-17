@@ -11,16 +11,31 @@
       <h1>Short URLs for your code</h1>
     </header>
     <main id="app">
-      <form @submit.prevent="createUrl()">
-        <label for="url">URL</label>
-        <input v-model="url" name="url" id="url" />
-        <label for="slug">Slug</label>
-        <input v-model="slug" name="slug" id="slug" />
-        <button type="submit">Create</button>
+      <form class="form" v-if="formVisible" @submit.prevent="createUrl()">
+        <input
+          class="input"
+          type="text"
+          v-model="url"
+          name="url"
+          id="url"
+          placeholder="Enter a URL"
+        />
+        <input
+          class="input"
+          type="text"
+          v-model="slug"
+          name="slug"
+          id="slug"
+          placeholder="Enter a Slug"
+        />
+        <button type="submit" class="create">create</button>
       </form>
-      <pre v-if="created">
-        {{JSON.stringify(created, null, 2)}}
-      </pre>
+      <div v-if="error" class="error">{{error}}</div>
+      <div v-if="created">
+        <p class="created">
+          Your short url is: <a :href="created">{{created}}</a>
+        </p>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="app.js"></script>
