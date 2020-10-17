@@ -27,7 +27,7 @@ A Node.js app with Express, MongoDB (Monk) & Heroku
 ## Vue
 
 - https://vuejs.org/v2/guide/
-- Latest Helmet versions throws errors using the CDN approach. Hence, the _Content Security Policy_ has been set up to false.
+- Since the latest Helmet versions throws errors using the CDN approach, the _Content Security Policy_ has been set up to false.
   ```js
   app.use(
     helmet({
