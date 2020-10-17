@@ -4,6 +4,8 @@ A Node.js app with Express, MongoDB (Monk) & Heroku
 
 :link: https://node-shortener-url.herokuapp.com/
 
+![example](/images/exampleUrlShortener.gif)
+
 ## Dependencies
 
 - **Express** is a fast, unopinionated, minimalist web framework for Node. https://www.npmjs.com/package/express
@@ -23,6 +25,15 @@ A Node.js app with Express, MongoDB (Monk) & Heroku
 - `$ heroku git:remote -a node-shortener-url`
 - `$ git push heroku main` . If this doesn't work, install the Buildpack for Nodejs:
   - `$ heroku buildpacks:set heroku/nodejs`
+
+## MongoDB
+
+- MongoDB Atlas
+  - Create a Cluster;
+  - Create Database Access;
+  - Connect your application;
+- Add the url access to **Heroku Config Vars**:
+  - MONGODB_URI -> mongodb+srv://<username>:<password>@...
 
 ## Vue
 
